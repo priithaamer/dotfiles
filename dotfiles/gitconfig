@@ -1,0 +1,61 @@
+[hub]
+    protocol = https
+[user]
+	email = priit@haamer.ee
+	name = Priit Haamer
+[credential]
+	helper = osxkeychain
+[color]
+    status = auto
+    branch = auto
+    diff = auto
+[alias]
+    st = status
+    ci = commit
+    co = checkout
+    br = branch
+    bra = branch -a
+    lol = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    cleanall = clean -d -f
+    rmdf = !git rm $(git ls-files --deleted)
+    fop = fetch origin --prune
+[difftool "Kaleidoscope"]
+    cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+    prompt = false
+[diff]
+    tool = Kaleidoscope
+[mergetool "Kaleidoscope"]
+    cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+    trustExitCode = true
+[mergetool]
+    prompt = false
+[merge]
+    tool = Kaleidoscope
+[core]
+    pager = less -r
+    editor = code --wait
+[push]
+    default = simple
+[github]
+	user = priithaamer
+[ghi]
+	editor = mate
+	pager = cat
+[include]
+    path = ~/.gitconfig_local
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[branch]
+	autosetuprebase = always
