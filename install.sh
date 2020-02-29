@@ -25,6 +25,7 @@ update_dotfiles() {
     printf "${infomsg} Cloning dotfiles to ${dotfiles_directory}\\n"
     git clone --quiet https://github.com/priithaamer/dotfiles.git $dotfiles_directory
   else
+    printf "${infomsg} Updating dotfiles in ${dotfiles_directory}\\n"
     cd $dotfiles_directory
     git pull
   fi
