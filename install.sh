@@ -53,13 +53,8 @@ link_fish() {
   do
     target="$HOME/.config/fish/`basename $source`"
 
-    if [ -f $target ] || [ -d $target ]
-    then
-      printf "${checkmark} File exists: ${target}\\n"
-    else
-      printf "${checkmark} Linking: ${source} -> ${target}\\n"
-      ln -sh $source $target
-    fi
+    printf "${checkmark} Linking: ${source} -> ${target}\\n"
+    ln -shF $source $target
   done
 }
 
