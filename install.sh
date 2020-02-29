@@ -20,10 +20,15 @@ if ! type "brew" > /dev/null; then
 fi
 
 # If dotfiles directory does not exist then clone it
-if [ ! -e $dotfiles_directory ]; then
-  printf "${infomsg} Cloning dotfiles to ${dotfiles_directory}\\n"
-  (git clone --quiet https://github.com/priithaamer/dotfiles.git $dotfiles_directory)
-fi
+update_dotfiles() {
+  if [ ! -e $dotfiles_directory ]; then
+    printf "${infomsg} Cloning dotfiles to ${dotfiles_directory}\\n"
+    git clone --quiet https://github.com/priithaamer/dotfiles.git $dotfiles_directory
+  else
+    cd $dotfiles_directory
+    git pull
+  fi
+}
 
 link_dotfiles() {
   printf "${clearline}${infomsg} Linking dotfiles...\\n"
@@ -48,6 +53,7 @@ brew_bundle() {
   brew bundle --global
 }
 
+update_dotfiles
 link_dotfiles
 brew_bundle
 
