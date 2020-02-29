@@ -21,6 +21,6 @@ fi
 if [ ! -e $dotfiles_directory ]; then
   printf "${infomsg} Cloning dotfiles to ${dotfiles_directory}\\n"
   (git clone --quiet https://github.com/priithaamer/dotfiles.git $dotfiles_directory)
-  printf "${infomsg} Done."
+  printf "${infomsg} Done.\\n"
 fi
 
