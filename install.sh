@@ -43,4 +43,11 @@ link_dotfiles() {
 
 }
 
+brew_bundle() {
+  printf "${clearline}${infomsg} Running Brew bundle...\\n"
+  brew bundle --global
+}
+
 link_dotfiles
+brew_bundle
+
