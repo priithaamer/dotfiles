@@ -45,7 +45,22 @@ link_dotfiles() {
       ln -sh $source $target
     fi
   done
+}
 
+link_fish() {
+  printf "${clearline}${infomsg} Linking Fish Shell configuration...\\n"
+  for source in $dotfiles_directory/fish/*
+  do
+    target="$HOME/.config/fish/`basename $source`"
+
+    if [ -f $target ] || [ -d $target ]
+    then
+      printf "${checkmark} File exists: ${target}\\n"
+    else
+      printf "${checkmark} Linking: ${source} -> ${target}\\n"
+      ln -sh $source $target
+    fi
+  done
 }
 
 brew_bundle() {
@@ -55,5 +70,6 @@ brew_bundle() {
 
 update_dotfiles
 link_dotfiles
+link_fish
 brew_bundle
 
