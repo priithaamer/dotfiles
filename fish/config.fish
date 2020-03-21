@@ -1,4 +1,4 @@
-set -x PATH $PATH ./node_modules/.bin /Users/priit/Library/Android/sdk/platform-tools
+set -x PATH $PATH ./node_modules/.bin /Users/priit/Library/Android/sdk/platform-tools $HOME/.cargo/bin
 
 # I have it here so that node-rdkafka for will build
 set -x CPPFLAGS -I/usr/local/opt/openssl/include
