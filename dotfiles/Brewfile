@@ -7,5 +7,6 @@ brew "exa"
 brew "fish"
 brew "mosh"
 brew "node@10", link: true, overwrite: true
+brew "ripgrep"
 brew "rust"
 brew "yarn"
