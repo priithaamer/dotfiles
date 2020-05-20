@@ -29,3 +29,12 @@ defaults write com.apple.dock wvous-bl-corner -int 2
 defaults write com.apple.dock wvous-bl-modifier -int 0
 
 #
+#  Applications
+#
+
+#  Xcode
+
+# Disable navigate with swipe on Magic Mouse
+defaults write com.apple.dt.Xcode AppleEnableMouseSwipeNavigateWithScrolls -bool NO
+
+#
