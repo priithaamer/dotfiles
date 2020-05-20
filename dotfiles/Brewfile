@@ -5,6 +5,7 @@ tap "homebrew/core"
 brew "bat"
 brew "exa"
 brew "fish"
+brew "jq"
 brew "mosh"
 brew "node@10", link: true, overwrite: true
 brew "ripgrep"
