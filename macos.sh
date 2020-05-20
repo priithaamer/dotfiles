@@ -38,3 +38,9 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 defaults write com.apple.dt.Xcode AppleEnableMouseSwipeNavigateWithScrolls -bool NO
 
 #
+#
+# Restart to apply
+#
+
+killall Finder &> /dev/null
+killall Dock &> /dev/null
