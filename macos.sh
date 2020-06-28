@@ -28,6 +28,11 @@ defaults write com.apple.dock wvous-br-modifier -int 0
 defaults write com.apple.dock wvous-bl-corner -int 2
 defaults write com.apple.dock wvous-bl-modifier -int 0
 
+#  System Preferences → Trackpad
+
+# Enable Tap to Click
+defaults -currentHost write -globalDomain com.apple.mouse.tapBehavior -int 1
+
 #
 #  Applications
 #
