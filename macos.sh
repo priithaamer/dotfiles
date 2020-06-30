@@ -10,6 +10,11 @@
 defaults write NSGlobalDomain KeyRepeat -int 2
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
+#  System Preferences → Dock & Menu Bar
+
+# Show recent applications in Dock
+defaults write com.apple.dock show-recents -int 0
+
 #  System Preferences → Mission Control → Hot Corners...
 
 # Top left screen corner → Start Screen Saver
@@ -28,10 +33,24 @@ defaults write com.apple.dock wvous-br-modifier -int 0
 defaults write com.apple.dock wvous-bl-corner -int 2
 defaults write com.apple.dock wvous-bl-modifier -int 0
 
+#  System Preferences → Mouse
+
+# Set scaling
+defaults write -g com.apple.mouse.scaling 2.5
+
+# Enable secondary click
+defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode -string 'TwoButton'
+
 #  System Preferences → Trackpad
 
 # Enable Tap to Click
 defaults -currentHost write -globalDomain com.apple.mouse.tapBehavior -int 1
+
+# TODO:
+# * Mouse -> Swipe between pages
+# * Keyboard modifiers ESC key
+# Copy SFMono fonts
+# cp /System/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/*.otf ~/Library/Fonts
 
 #
 #  Applications
