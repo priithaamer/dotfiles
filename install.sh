@@ -8,7 +8,7 @@ checkmark="\\033[32m✓\\033[0m"
 clearline="\\033[2K"
 
 install_homebrew() {
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 }
 
 # If homebrew is not installed then install it
