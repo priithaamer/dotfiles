@@ -1,0 +1,5 @@
+spin=false
+progress=false
+cache-min=60
+//registry.npmjs.org/:_authToken=${NPM_TOKEN}
+//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
