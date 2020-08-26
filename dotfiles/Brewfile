@@ -37,7 +37,6 @@ brew "youtube-dl"
 
 cask "alfred"
 cask "android-studio"
-cask "arq"
 cask "audio-hijack"
 cask "authy"
 cask "bbedit"
