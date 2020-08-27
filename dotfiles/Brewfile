@@ -21,6 +21,7 @@ brew "haskell-stack"
 brew "jq"
 brew "kotlin"
 brew "kubernetes-cli", link: false, overwrite: true
+brew "kustomize"
 brew "leiningen"
 brew "protobuf"
 brew "mosh"
