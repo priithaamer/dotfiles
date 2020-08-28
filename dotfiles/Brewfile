@@ -68,3 +68,17 @@ cask "tower"
 cask "transmission"
 cask "visual-studio-code"
 cask "webstorm"
+
+mas "1Blocker", id: 1107421413
+mas "1Password", id: 443987910
+mas "Bear", id: 1091189122
+mas "DaisyDisk", id: 411643860
+mas "Messenger", id: 1480068668
+mas "Numbers", id: 409203825
+mas "Reeder 4", id: 1449412482
+mas "Reeder", id: 1449412482
+mas "Slack", id: 803453959
+mas "SnippetsLab", id: 1006087419
+mas "Things", id: 904280696
+mas "Transmit", id: 1436522307
+mas "Tweetbot 3 for Twitter", id: 1384080005
