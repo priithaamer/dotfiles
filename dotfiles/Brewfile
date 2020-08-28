@@ -24,6 +24,7 @@ brew "kubernetes-cli", link: false, overwrite: true
 brew "kustomize"
 brew "leiningen"
 brew "protobuf"
+brew "mas"
 brew "mosh"
 brew "node@12", link: true, overwrite: true
 brew "ripgrep"
