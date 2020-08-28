@@ -26,7 +26,7 @@ brew "leiningen"
 brew "protobuf"
 brew "mas"
 brew "mosh"
-brew "node@12", link: true, overwrite: true
+brew "node@12", link: true, overwrite: true, conflicts_with: ["node"]
 brew "ripgrep"
 brew "rustup-init"
 brew "tmux"
