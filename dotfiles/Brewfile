@@ -26,6 +26,7 @@ brew "kustomize"
 brew "leiningen"
 brew "lerna"
 brew "protobuf"
+brew "rename"
 brew "mas"
 brew "mosh"
 brew "node@12", link: true, overwrite: true, conflicts_with: ["node"]
