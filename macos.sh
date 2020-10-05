@@ -56,6 +56,11 @@ defaults -currentHost write -globalDomain com.apple.mouse.tapBehavior -int 1
 #  Applications
 #
 
+#  Finder
+
+# Remove delay from document proxy icon reveal
+defaults write -g NSToolbarTitleViewRolloverDelay -float 0
+
 #  Xcode
 
 # Disable navigate with swipe on Magic Mouse
