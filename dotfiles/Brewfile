@@ -2,6 +2,8 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
 
+tap "GoogleContainerTools/kpt", "https://github.com/GoogleContainerTools/kpt.git"
+
 brew "awscli"
 brew "bat"
 brew "blackbox"
@@ -21,6 +23,7 @@ brew "gzip"
 brew "haskell-stack"
 brew "jq"
 brew "kotlin"
+brew "kpt"
 brew "kubernetes-cli", link: true, overwrite: true
 brew "kustomize"
 brew "leiningen"
