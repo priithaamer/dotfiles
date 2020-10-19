@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+
+for show in "$@"; do
+  episode=$(ffmpeg -i $show 2>&1 >/dev/null | grep episode_sort | head -n 1 | awk -F':' '{print $2}' | sed "s/^[ \t]*//")
+  title=$(ffmpeg -i $show 2>&1 >/dev/null | grep title | head -n 1 | awk -F':' '{print $2}' | sed "s/^[ \t]*//")
+  episode_no=`printf %02d $episode`
+
+  echo "$show to $episode_no $title.mp4"
+  mv $show "$episode_no $title.mp4"
+done
