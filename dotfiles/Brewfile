@@ -28,6 +28,7 @@ brew "kubernetes-cli", link: true, overwrite: true
 brew "kustomize"
 brew "leiningen"
 brew "lerna"
+brew "pinentry-mac"
 brew "protobuf"
 brew "rename"
 brew "mas"

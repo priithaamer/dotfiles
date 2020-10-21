@@ -3,8 +3,13 @@
 [user]
 	email = priit@haamer.ee
 	name = Priit Haamer
+	signingkey = 29A34696AA1502271E5A61763C7E9377C19D67B9
 [credential]
 	helper = osxkeychain
+[commit]
+	gpgsign = true
+[gpg]
+	program = /usr/local/bin/gpg
 [color]
     status = auto
     branch = auto
