@@ -76,6 +76,17 @@ link_fish() {
   done
 }
 
+link_docker() {
+  printf "${clearline}${infomsg} Linking Docker configuration...\\n"
+  for source in $dotfiles_directory/docker/*
+  do
+    target="$HOME/.docker/`basename $source`"
+
+    printf "${checkmark} Linking: ${source} -> ${target}\\n"
+    ln -shF $source $target
+  done
+}
+
 brew_bundle() {
   printf "${clearline}${infomsg} Running Brew bundle...\\n"
   brew bundle --global
@@ -84,6 +95,6 @@ brew_bundle() {
 update_dotfiles
 link_dotfiles
 link_fish
+link_docker
 link_bin
 brew_bundle
-
