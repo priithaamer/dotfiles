@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if (/usr/bin/python -c 'import Quartz; d = Quartz.CGSessionCopyCurrentDictionary(); print d' | grep 'CGSSessionScreenIsLocked = 1'); then
+  echo "Locked"
+else
+  datestr=`date +'%Y%m%d%H%M%S'`
+  filename="/Users/priit/Documents/Screenshots/MacBookAirM1/$datestr.jpg"
+  /usr/sbin/screencapture -C -t jpg -x $filename
+fi
