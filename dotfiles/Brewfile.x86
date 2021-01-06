@@ -1,0 +1,15 @@
+brew "bat"
+brew "exa"
+brew "jq"
+brew "kustomize"
+brew "node@12", link: true, overwrite: true, conflicts_with: ["node"]
+brew "numpy"
+brew "pinentry"
+brew "pinentry-mac"
+brew "python@3.8"
+brew "python@3.9"
+brew "scipy"
+brew "tree"
+brew "yarn"
+
+cask "google-cloud-sdk

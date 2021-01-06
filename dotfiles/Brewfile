@@ -1,93 +1,17 @@
-tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
-
-tap "GoogleContainerTools/kpt", "https://github.com/GoogleContainerTools/kpt.git"
-
-brew "awscli"
-brew "bat"
-brew "blackbox"
-brew "cabal-install"
-brew "clojure"
-brew "deno"
-brew "dosbox"
-brew "exa"
-brew "ffmpeg"
 brew "fish"
-brew "fx"
-brew "git-extras"
-brew "go"
-brew "graphviz"
-brew "gron"
-brew "gzip"
-brew "haskell-stack"
-brew "jq"
-brew "kotlin"
-brew "kpt"
-brew "kubernetes-cli", link: true, overwrite: true
-brew "kustomize"
-brew "leiningen"
-brew "lerna"
-brew "pinentry-mac"
-brew "protobuf"
-brew "rename"
-brew "mas"
-brew "mosh"
-brew "node@12", link: true, overwrite: true, conflicts_with: ["node"]
-brew "python-yq"
-brew "ripgrep"
-brew "rustup-init"
-brew "tmux"
-brew "tree"
 brew "wget"
-brew "yarn"
-brew "youtube-dl"
 
 cask "alfred"
-cask "android-studio"
-cask "audio-hijack"
-cask "authy"
-cask "bbedit"
 cask "dash"
-cask "docker"
-cask "dotnet-sdk"
-cask "figma"
-cask "firefox"
-cask "google-chrome"
-cask "google-cloud-sdk"
 cask "hazel"
-cask "intellij-idea-ce"
+cask "imazing"
 cask "istat-menus"
 cask "iterm2"
-cask "java"
-cask "julia"
-cask "mono-mdk"
-cask "monodraw"
 cask "notion"
-cask "openemu"
 cask "pastebot"
-cask "paw"
 cask "postico"
-cask "qgis"
-cask "rectangle"
 cask "soulver"
 cask "subler"
-cask "tla-plus-toolbox"
 cask "tower"
 cask "transmission"
 cask "visual-studio-code"
-cask "webstorm"
-
-mas "1Blocker", id: 1107421413
-mas "1Password", id: 443987910
-mas "Bear", id: 1091189122
-mas "DaisyDisk", id: 411643860
-mas "Messenger", id: 1480068668
-mas "Numbers", id: 409203825
-mas "Reeder 4", id: 1449412482
-mas "Reeder", id: 1449412482
-mas "Slack", id: 803453959
-mas "SnippetsLab", id: 1006087419
-mas "Things", id: 904280696
-mas "Transmit", id: 1436522307
-mas "Tweetbot 3 for Twitter", id: 1384080005

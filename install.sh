@@ -89,7 +89,8 @@ link_docker() {
 
 brew_bundle() {
   printf "${clearline}${infomsg} Running Brew bundle...\\n"
-  brew bundle --global
+  brew bundle --file $HOME/.Brewfile
+  ibrew bundle --file $HOME/.Brewfile.x86
 }
 
 update_dotfiles
