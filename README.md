@@ -7,6 +7,6 @@ curl -sL https://raw.githubusercontent.com/priithaamer/dotfiles/master/install.s
 ## Set fish as default shell
 
 ```bash
-echo /usr/local/bin/fish | sudo tee -a /etc/shells
-chsh -s /usr/local/bin/fish
+echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
+chsh -s /opt/homebrew/bin/fish
 ```
