@@ -4,6 +4,11 @@
 #  System
 #
 
+#  System Preferences → Accessibility
+
+# Enable window proxy icons
+defaults write com.apple.universalaccess.showWindowTitlebarIcons -bool YES
+
 #  System Preferences → Keyboard
 
 # Set a blazingly fast keyboard repeat rate
