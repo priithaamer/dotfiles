@@ -9,7 +9,7 @@
 [commit]
 	gpgsign = true
 [gpg]
-	program = /usr/local/bin/gpg
+	program = /opt/homebrew/bin/gpg
 [color]
     status = auto
     branch = auto
@@ -64,3 +64,5 @@
 	process = git-lfs filter-process
 [branch]
 	autosetuprebase = always
+[init]
+	defaultBranch = main
