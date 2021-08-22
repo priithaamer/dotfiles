@@ -4,6 +4,9 @@ set -x PATH /opt/homebrew/bin $PATH ./node_modules/.bin /usr/local/opt/openjdk/b
 set -x CPPFLAGS -I/opt/homebrew/opt/openssl/include
 set -x LDFLAGS -L/opt/homebrew/opt/openssl/lib
 
+function ...;   cd ../..; end
+function ....;  cd ../../..; end
+
 if test -e ~/.local/share/fish/exports.fish
   source ~/.local/share/fish/exports.fish
 end
