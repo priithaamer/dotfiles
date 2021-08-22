@@ -4,6 +4,9 @@ set -x PATH /opt/homebrew/bin $PATH ./node_modules/.bin /usr/local/opt/openjdk/b
 set -x CPPFLAGS -I/opt/homebrew/opt/openssl/include
 set -x LDFLAGS -L/opt/homebrew/opt/openssl/lib
 
+set -x GOPATH $HOME/Source/go
+set -x PATH $GOPATH/bin $PATH
+
 function ...;   cd ../..; end
 function ....;  cd ../../..; end
 
