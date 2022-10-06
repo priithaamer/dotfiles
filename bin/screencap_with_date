@@ -4,6 +4,6 @@ if (/usr/bin/python -c 'import Quartz; d = Quartz.CGSessionCopyCurrentDictionary
   echo "Locked"
 else
   datestr=`date +'%Y%m%d%H%M%S'`
-  filename="/Users/priit/Documents/Screenshots/MacBookAirM1/$datestr.jpg"
+  filename="/Users/priit/Documents/Screenshots/Mac/$datestr.jpg"
   /usr/sbin/screencapture -C -t jpg -x $filename
 fi
