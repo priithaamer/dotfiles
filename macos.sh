@@ -71,6 +71,10 @@ defaults write -g NSToolbarTitleViewRolloverDelay -float 0
 # Disable navigate with swipe on Magic Mouse
 defaults write com.apple.dt.Xcode AppleEnableMouseSwipeNavigateWithScrolls -bool NO
 
+# Faster Swift compile.
+# See https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-13_3-release-notes#Build-System
+defaults write http://com.apple.dt.XCBuild EnableSwiftBuildSystemIntegration 1
+
 #
 #
 # Restart to apply
