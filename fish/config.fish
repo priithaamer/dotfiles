@@ -9,6 +9,7 @@ set -x PATH $GOPATH/bin $PATH
 
 set -g fish_color_autosuggestion "yellow"
 
+set -x USE_GKE_GCLOUD_AUTH_PLUGIN "True"
 
 if test -e ~/.local/share/fish/exports.fish
   source ~/.local/share/fish/exports.fish
