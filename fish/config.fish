@@ -15,6 +15,10 @@ if test -e ~/.local/share/fish/exports.fish
   source ~/.local/share/fish/exports.fish
 end
 
+if test -e /opt/homebrew/bin/zoxide
+  zoxide init fish | source
+end
+
 if test -e /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
   source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
 end
