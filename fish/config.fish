@@ -7,8 +7,8 @@ set -x LDFLAGS -L/opt/homebrew/opt/openssl/lib
 set -x GOPATH $HOME/Source/go
 set -x PATH $GOPATH/bin $PATH
 
-function ...;   cd ../..; end
-function ....;  cd ../../..; end
+set -g fish_color_autosuggestion "yellow"
+
 
 if test -e ~/.local/share/fish/exports.fish
   source ~/.local/share/fish/exports.fish
