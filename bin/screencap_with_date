@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
-if (/usr/bin/python -c 'import Quartz; d = Quartz.CGSessionCopyCurrentDictionary(); print d' | grep 'CGSSessionScreenIsLocked = 1'); then
-  echo "Locked"
+function screenIsLocked { [ "$(/usr/libexec/PlistBuddy -c "print :IOConsoleUsers:0:CGSSessionScreenIsLocked" /dev/stdin 2>/dev/null <<< "$(ioreg -n Root -d1 -a)")" = "true" ] && return 0 || return 1; }
+function screenIsUnlocked { [ "$(/usr/libexec/PlistBuddy -c "print :IOConsoleUsers:0:CGSSessionScreenIsLocked" /dev/stdin 2>/dev/null <<< "$(ioreg -n Root -d1 -a)")" != "true" ] && return 0 || return 1; }
+
+if screenIsLocked; then
+    echo "Screen locked"
 else
   datestr=`date +'%Y%m%d%H%M%S'`
   filename="/Users/priit/Documents/Screenshots/Mac/$datestr.jpg"
