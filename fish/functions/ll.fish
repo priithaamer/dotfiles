@@ -1,3 +1,3 @@
 function ll
-  exa --long --all $argv
+  exa --long --grid --no-user --all --git --time-style=long-iso $argv
 end
