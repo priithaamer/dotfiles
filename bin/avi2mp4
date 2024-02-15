@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+for show in "$@"; do
+  name=`echo $show | sed -e 's/avi/mp4/g'`
+  ffmpeg -i $show -c:v libx264 -crf 20 -c:a aac -q:a 100 -strict -2 -ac 2 $name
+  sleep 2m
+done

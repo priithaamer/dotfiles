@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# Needed to enable job control in this script
+set -m
+
+database='supersimple'
+username=`kubectl -n supersimple get secret supersimple-2-db -o json | jq -r '.data.username' | base64 -d`
+password=`kubectl -n supersimple get secret supersimple-2-db -o json | jq -r '.data.password' | base64 -d`
+
+kubectl -n supersimple port-forward deployment/supersimple-2-db-proxy 5434:5432 &
+
+while true; do
+  nc -z localhost 5434
+  if [ $? -eq 0 ]; then
+    echo "🐘 Open Database UI"
+    echo "postgres://$username:$password@localhost:5434/$database"
+    open -a "Postico 2" "postgres://$username:$password@localhost:5434/$database"
+    break
+  fi
+  sleep 0.5
+done
+
+fg %1

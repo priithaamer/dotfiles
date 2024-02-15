@@ -34,67 +34,8 @@ update_dotfiles() {
 link_dotfiles() {
   printf "${clearline}${infomsg} Linking dotfiles...\\n"
 
-  for source in $dotfiles_directory/dotfiles/*
-  do
-    target="$HOME/.`basename $source`"
-
-    if [ -f $target ] || [ -d $target ]
-    then
-      printf "${checkmark} File exists: ${target}\\n"
-    else
-      printf "${checkmark} Linking: ${source} -> ${target}\\n"
-      ln -sh $source $target
-    fi
-  done
+  stow --dir $dotfiles_directory --verbose --target $HOME -R dotfiles
+  stow --dir $dotfiles_directory --verbose --target /usr/local/bin -R bin
 }
 
-link_bin() {
-  printf "${clearline}${infomsg} Linking my executables...\\n"
-
-  for source in $dotfiles_directory/bin/*
-  do
-    target="/usr/local/bin/`basename $source`"
-
-    if [ -f $target ] || [ -d $target ]
-    then
-      printf "${checkmark} File exists: ${target}\\n"
-    else
-      printf "${checkmark} Linking: ${source} -> ${target}\\n"
-      ln -sh $source $target
-    fi
-  done
-}
-
-link_fish() {
-  printf "${clearline}${infomsg} Linking Fish Shell configuration...\\n"
-  for source in $dotfiles_directory/fish/*
-  do
-    target="$HOME/.config/fish/`basename $source`"
-
-    printf "${checkmark} Linking: ${source} -> ${target}\\n"
-    ln -shF $source $target
-  done
-}
-
-link_docker() {
-  printf "${clearline}${infomsg} Linking Docker configuration...\\n"
-  for source in $dotfiles_directory/docker/*
-  do
-    target="$HOME/.docker/`basename $source`"
-
-    printf "${checkmark} Linking: ${source} -> ${target}\\n"
-    ln -shF $source $target
-  done
-}
-
-brew_bundle() {
-  printf "${clearline}${infomsg} Running Brew bundle...\\n"
-  brew bundle --file $HOME/.Brewfile
-}
-
-update_dotfiles
 link_dotfiles
-link_fish
-link_docker
-link_bin
-brew_bundle

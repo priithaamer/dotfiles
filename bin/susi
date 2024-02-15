@@ -14,7 +14,7 @@ while true; do
   if [ $? -eq 0 ]; then
     echo "🐘 Open Database UI"
     echo "postgres://$username:$password@localhost:5433/$database"
-    open -a Postico "postgres://$username:$password@localhost:5433/$database"
+    open -a "Postico 2" "postgres://$username:$password@localhost:5433/$database"
     break
   fi
   sleep 0.5
