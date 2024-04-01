@@ -3,11 +3,11 @@
 # Needed to enable job control in this script
 set -m
 
-database='postgres'
-username=`kubectl -n supersimple get secret supersimple-db -o json | jq -r '.data.username' | base64 -d`
-password=`kubectl -n supersimple get secret supersimple-db -o json | jq -r '.data.password' | base64 -d`
+database='supersimple'
+username=`kubectl --context supersimple-production -n supersimple get secret supersimple-db -o json | jq -r '.data.username' | base64 -d`
+password=`kubectl --context supersimple-production -n supersimple get secret supersimple-db -o json | jq -r '.data.password' | base64 -d`
 
-kubectl -n supersimple port-forward deployment/supersimple-db-proxy 5433:5432 &
+kubectl --context supersimple-production -n supersimple port-forward deployment/supersimple-db-proxy 5433:5432 &
 
 while true; do
   nc -z localhost 5433
