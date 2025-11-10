@@ -6,7 +6,15 @@ function screenIsUnlocked { [ "$(/usr/libexec/PlistBuddy -c "print :IOConsoleUse
 if screenIsLocked; then
     echo "Screen locked"
 else
+  yeer=`date +'%Y'`
   datestr=`date +'%Y%m%d%H%M%S'`
-  filename="/Users/priit/Documents/Screenshots/Mac/$datestr.jpg"
-  /usr/sbin/screencapture -C -t jpg -x $filename
+  target_directory="/Users/priit/Documents/Screenshots/$yeer"
+  jpg_filename="/tmp/$datestr.jpg"
+  jxl_filename="$target_directory/$datestr.jxl"
+
+  mkdir -p $target_directory
+
+  /usr/sbin/screencapture -C -t jpg -x $jpg_filename
+  /opt/homebrew/bin/cjxl $jpg_filename $jxl_filename --quality=75 --lossless_jpeg=0
+  rm $jpg_filename
 fi
